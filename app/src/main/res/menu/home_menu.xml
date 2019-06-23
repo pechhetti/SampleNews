@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/one_day" android:id="@+id/one_day"/>
+    <item android:title="@string/seven_days" android:id="@+id/seven_days"/>
+    <item android:title="@string/thirty_days" android:id="@+id/thirty_days"/>
+</menu>
