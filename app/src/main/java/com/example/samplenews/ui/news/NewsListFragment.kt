@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.samplenews.App
 import com.example.samplenews.R
 import com.example.samplenews.databinding.FragmentNewsListBinding
 import io.reactivex.disposables.CompositeDisposable
@@ -44,6 +45,7 @@ class NewsListFragment : Fragment() {
         activity?.let { activity ->
             newsViewModel = ViewModelProviders.of(activity).get(NewsViewModel::class.java)
             with(newsViewModel) {
+                (activity.application as App).component.inject(this)
                 dataBinding.viewModel = this
                 lifecycle.addObserver(this)
                 newsUiNavigationFlowable.subscribe { event ->
