@@ -11,7 +11,7 @@ import retrofit2.http.Path
 interface NewsService {
 
     // Replace "yourkey" with original key
-    @GET("svc/mostpopular/v2/viewed/{days}.json?api-key=HQ35yIYJXbUvUTIB0z41w8LKG80AvmIM")
+    @GET("svc/mostpopular/v2/viewed/{days}.json?api-key=yourkey")
     fun getMostPopularNews(@Path("days") days: Int): Observable<NewsFeedsModel>
 
 }
